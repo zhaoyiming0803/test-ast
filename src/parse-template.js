@@ -38,7 +38,9 @@ function parseConditionalStatement(path, mode) {
 module.exports = function () {
   const template = `
     <template>
-      <view z-if="{{isShow}}">{{content}}</view>
+      <view z-if="{{isShow1}}">
+        <view z-if="{{isShow2}}"></view>
+      </view>
     </template>
   `
   const ast = parse(template, {
