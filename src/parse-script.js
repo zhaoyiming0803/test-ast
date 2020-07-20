@@ -24,6 +24,7 @@ module.exports = function () {
   const ast = parse(script)
   
   traverse(ast, {
+    // https://babeljs.io/docs/en/babel-types#api
     CallExpression (p) {
       const node = p.node
       if (node.callee.name === 'require') {
