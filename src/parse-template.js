@@ -7,7 +7,7 @@ const {trimCurly} = require('./utils')
 
 const mode = 'web'
 
-function parseTemplate (path, mode) {
+function parseTag (path, mode) {
   let node = path.node
   if (t.isJSXElement(node)) {
     let currentTag = node.openingElement.name.name
@@ -50,7 +50,7 @@ module.exports = function () {
 
   traverse(ast, {
     enter (path) {
-      parseTemplate(path, mode)
+      parseTag(path, mode)
       parseConditionalStatement(path, mode)
     }
   })
