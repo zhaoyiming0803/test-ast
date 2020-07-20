@@ -1,11 +1,6 @@
 const {parse, parseExpression} = require('babylon')
 const traverse = require('@babel/traverse').default
 const generate = require('@babel/generator').default
-const t = require('@babel/types')
-const {tagMap, conditionMap} = require('./config/template')
-const {trimCurly} = require('./utils')
-const path = require('path')
-
 const fs = require("fs")
 const { CachedInputFileSystem, ResolverFactory } = require("enhanced-resolve")
 
