@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "parse": "node ./src/index.js",
-    "parse:template": "node ./src/index.js --template"
+    "parse:template": "node ./src/index.js --template",
+    "parse:script": "node ./src/index.js --script",
+    "parse:binary": "node ./src/index.js --binary",
+    "parse:import": "node ./src/index.js --import",
+    "parse:insert-to-function": "node ./src/index.js --insert-to-function",
+    "parse:callexpression": "node ./src/index.js --callexpression"
   },
   "author": "",
   "license": "ISC",

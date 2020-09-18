@@ -1,10 +1,6 @@
-const originalArgv = JSON.parse(process.env.npm_config_argv)
-  .original
-  .filter(item => item.indexOf('--') === 0)
-  .map(item => item.slice(2))
+const type = JSON.parse(process.env.npm_config_argv)
+  .original[1].split(':')[1]
 
-if (originalArgv.length) {
-  originalArgv.forEach(type => {
-    require(`./parse-${type}`)()
-  })
+if (type) {
+  require(`./parse-${type}`)()
 }
